@@ -31,9 +31,9 @@ function getFiltered() {
   }
 
   if (sort === "asc") {
-    result.sort((a, b) => b.price - a.price);
-  } else if (sort === "desc") {
     result.sort((a, b) => a.price - b.price);
+  } else if (sort === "desc") {
+    result.sort((a, b) => b.price - a.price);
   }
 
   return result;
@@ -41,7 +41,7 @@ function getFiltered() {
 
 function render() {
   const items = getFiltered();
-grid.innerHTML = "";
+  grid.innerHTML = "";
   items.forEach((p) => {
     const card = document.createElement("div");
     card.className = "card";
